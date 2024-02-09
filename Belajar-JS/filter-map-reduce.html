@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li data-duration="10:00">JAVASCRIPT LANJUTAN 1</li>
+      <li data-duration="15:00">JAVASCRIPT LANJUTAN 2</li>
+      <li data-duration="09:00">Python</li>
+      <li data-duration="12:00">C++</li>
+      <li data-duration="20:00">JAVASCRIPT LANJUTAN 3</li>
+    </ul>
+
+    <h3>My Playlist :</h3>
+    <ol>
+      <li>
+        <h4>Javascript Lanjutan</h4>
+        <p>Jumlah Video : <span class="jumlah-video"></span></p>
+        <p>Total Durasi : <span class="total-video"></span></p>
+      </li>
+    </ol>
+    <script>
+      // ambil semua elemen video
+      const videos = Array.from(document.querySelectorAll("[data-duration]"));
+
+      // pilih hanya yang 'Javacript'
+      const filterJS = videos
+        .filter((vd) => vd.textContent.includes("JAVASCRIPT LANJUTAN"))
+        // artinya ambil video - yang textcontentnya - terdapat - text yang dicari
+        //filter -> map
+        // ambil durasi masing2 video
+        .map((item) => item.dataset.duration)
+
+        // ubah durasi menjadi float, ubah menit menjadi detik
+        .map((waktu) => {
+          //ubah 10:00 -> [10,30] di split
+          const parts = waktu
+            .split(":")
+            //ubah titik dua menjadi koma agar bisa dihitung
+            .map((part) => parseFloat(part));
+          //
+          return parts[0] * 60 + parts[1];
+        });
+      // jumlah semua detik
+
+      // ubah formatnya jadi jam menit detik
+
+      // simpan di DOM
+      console.log(filterJS);
+    </script>
+  </body>
+</html>

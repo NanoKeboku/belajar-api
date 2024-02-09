@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: orange;
+        color: white;
+        height: 120px;
+      }
+
+      .logo {
+        display: flex;
+        width: 100%;
+        height: 50%;
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      nav {
+        display: flex;
+        position: relative;
+        gap: 30px;
+        padding: 10px;
+        background-color: rgb(155, 155, 209);
+        width: 100%;
+        height: 50%;
+        align-items: center;
+        justify-content: center;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+      }
+
+      main {
+        display: flex;
+        width: 100%;
+        height: 80vh;
+        flex-direction: row;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+      }
+
+      section {
+        width: 70%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        background-color: bisque;
+      }
+
+      aside {
+        display: flex;
+        width: 30%;
+        height: 100%;
+        padding: 30px;
+        background-color: black;
+        color: white;
+        flex-direction: column;
+      }
+
+      footer {
+        display: flex;
+        width: 100%;
+        height: 50px;
+        background-color: gainsboro;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        position: relative;
+      }
+
+      section h1 {
+        font-size: 40px;
+        font-family: monospace;
+      }
+
+      .act {
+        display: flex;
+        width: 80%;
+        height: auto;
+        padding-top: 30px;
+        flex-direction: column;
+      }
+
+      p {
+        font-size: 17px;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      .sec {
+        padding-top: 10px;
+      }
+
+      #cop {
+        display: flex;
+        border-right: 1px solid black;
+        margin-right: 20px;
+        padding-right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>Logo</h1>
+      </div>
+      <nav>
+        <a href="">Home</a>
+        <a href="">Profile</a>
+        <a href="">Contact Us</a>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h1>Activity</h1>
+        <hr />
+        <div class="act">
+          <p>
+            Halo, Perkenalkan namaku nando, kali ini aku akan menceritakan
+            aktifitasku selama 1 minggu sebelumnya. Agenda minggu ini yaitu
+            mempersiapkan kegiatan acara Makrab PSTI 2023 yang akan
+            diselenggarakan pada tangal 19-20 Oktober 2023. Jadi selama satu
+            minggu ini aku full berpartisipasi untuk mempersiapkan acara
+            tersebut
+          </p>
+          <br />
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero
+            nobis, sapiente voluptate rerum, quod accusantium alias iusto
+            cumque, fugit cum ipsa. Tenetur recusandae doloribus sunt quidem
+            ratione quia doloremque commodi.
+          </p>
+          <br />
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero
+            nobis, sapiente voluptate rerum, quod accusantium alias iusto
+            cumque, fugit cum ipsa. Tenetur recusandae doloribus sunt quidem
+            ratione quia doloremque commodi.
+          </p>
+        </div>
+      </section>
+      <aside>
+        <h1 style="font-family: monospace; font-size: 40px">Biodata</h1>
+        <hr />
+        <br />
+        <div class="sec">
+          <p>Nama : Alhambra Ferdinando</p>
+          <br />
+          <p>Kelas : C</p>
+          <br />
+          <p>Alamat : Purworejo, Jawa Tengah</p>
+          <br />
+          <p></p>
+        </div>
+
+        <p>
+          Halo!, Saya kuliah di Universitas Muhammadiyah Purworejo, sekarang
+          semester 3, cita-cita saya menjadi Software Engineering, Hoby saya
+          olahraga, main game, musik.
+        </p>
+      </aside>
+    </main>
+    <footer>
+      <p id="cop">Copyright 2023</p>
+      <p>Alhambra Ferdinando</p>
+    </footer>
+  </body>
+</html>

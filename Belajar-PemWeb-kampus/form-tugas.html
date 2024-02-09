@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        font-family: cursive;
+      }
+
+      input {
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 20px;
+        padding: 5px;
+      }
+
+      select {
+        background-color: transparent;
+      }
+
+      textarea {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      body {
+        width: 100%;
+        height: 100vh;
+      }
+      form {
+        width: 50%;
+        padding: 20px;
+        margin: auto;
+        position: relative;
+        top: 50px;
+      }
+
+      legend {
+        font-weight: bold;
+        font-size: 30px;
+      }
+
+      fieldset {
+        background-color: pink;
+        padding: 20px;
+        border-radius: 20px;
+      }
+
+      input:hover {
+        border-color: red;
+      }
+
+      .btn {
+        position: relative;
+        left: 200px;
+        padding: 5px;
+        border-radius: 2px;
+        cursor: pointer;
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Matematika</legend>
+        <label for="tugas">Masukkan Tugas :</label><br /><br />
+        <textarea name="tugas" id="" cols="30" rows="5"></textarea>
+        <br /><br />
+        <label for="nilai">Nilai : </label>
+        <select name="dropdown" style="border: none">
+          <option value="a">60</option>
+          <option value="b">70</option>
+          <option value="c">80</option>
+          <option value="c">90</option>
+          <option value="c">100</option>
+        </select>
+        <br /><br />
+        <label for="tenggat">Tenggat : </label>
+        <input type="date" />
+        <br /><br />
+        <label for="time">Waktu : </label>
+        <input type="time" />
+        <br /><br />
+        <label for="topik">Masukkan Topik : </label>
+        <input type="text" placeholder="Topik" />
+        <br /><br />
+        <input type="submit" class="btn" />
+        <input type="reset" class="btn" />
+      </fieldset>
+    </form>
+  </body>
+</html>

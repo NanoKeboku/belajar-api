@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Pemilihan Ketua Hima</legend>
+      <p>Nama :</p>
+      <p>Faiz Romadoni :</p>
+      <p id="satu"></p>
+      <p>Faiz Abu Bakar :</p>
+      <p id="dua"></p>
+
+      <br /><br />
+      <button onclick="satu()">1</button>
+      <button onclick="dua()">2</button>
+    </fieldset>
+
+    <script>
+      function satu() {
+        let satu = 0;
+
+        satu += 1;
+
+        document.getElementById("satu").innerHTML += satu;
+      }
+
+      function dua() {
+        let dua = 0;
+
+        dua += 1;
+
+        document.getElementById("dua").innerHTML += dua;
+      }
+    </script>
+  </body>
+</html>

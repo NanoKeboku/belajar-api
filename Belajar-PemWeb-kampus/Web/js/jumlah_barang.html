@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label>Jumlah Barang</label><br /><br />
+    <button id="kurang" onclick="hitung(1)">-</button>
+    <input
+      type="text"
+      id="jumlah_barang"
+      name="jumlah_barang"
+      placeholder="1"
+    />
+    <button onclick="hitung(2)">+</button>
+    <br /><br />
+    <label>Harga Barang</label><br />
+    <p id="harga">Rp. 25000</p>
+    <script>
+      let jumlah = 0;
+      function hitung(pilih) {
+        if (pilih == 1) {
+          if (jumlah > 1) {
+            jumlah -= 1;
+          } else {
+            jumlah = 1;
+          }
+        } else if (pilih == 2) {
+          jumlah += 1;
+        }
+        let harga = jumlah * 25000;
+        document.getElementById("jumlah_barang").value = jumlah;
+        document.getElementById("harga").innerHTML = "Rp. " + harga;
+        console.log(jumlah);
+      }
+    </script>
+  </body>
+</html>

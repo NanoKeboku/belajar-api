@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-3.4.1.js"></script>
+</head>
+<style>
+  #anim {
+    display: flex;
+    position: relative;
+  }
+
+  .i {
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+    position: relative;
+  }
+
+  #panel,
+  #flip {
+    width: 100px;
+    height: 100px;
+    padding: 1px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #555;
+    color: white;
+    border: solid 1px #666;
+    border-radius: 3px;
+    display: flex;
+  }
+
+  #panel {
+    padding: 50px;
+    display: none;
+  }
+</style>
+
+<body>
+  <button id="hide">hide</button>
+  <button id="show">show</button>
+  <button id="next">toggle</button>
+  <button id="fadein">fadein</button>
+  <button id="fadeout">fadeout</button>
+  <button id="fadeToggle">fadeToggle</button>
+  <button id="fadeTo">fadeTo50</button>
+  <button id="fadeToUp">fadeTo100</button>
+  <button id="slideUp">slideUp</button>
+  <button id="slideDown">slideDown</button>
+  <button id="slideToggle">slideToggle</button>
+  <p class="hello">Hello</p>
+
+  <br><br><br><br><br><br>
+  <button id="animasi">Animate</button>
+  <button id="besar">besar</button>
+  <button id="besarPlus">besar-plus</button>
+  <button id="tgl">height toggle</button>
+  <button id="stop">stop slide</button>
+  <div class="i">
+    <p id="anim">Animate</p>
+  </div>
+  <div id="slide">
+    Slide Down
+  </div>
+  <div id="panel">
+    <p>Anjay</p>
+  </div>
+  <script>
+    $(document).ready(function () {
+
+      $("#hide").click(function () {
+        $(".hello").hide(100);
+      });
+      $("#show").click(function () {
+        $(".hello").show(200, function () {
+          alert("anjay")
+        });
+      });
+      $("#next").click(function () {
+        $(".hello").toggle(200);
+      });
+
+      //with callback
+      $("#fadein").click(function () {
+        $(".hello").fadeIn("slow", function (params) {
+
+        });
+      });
+      $("#fadeout").click(function () {
+        $(".hello").fadeOut(100);
+      });
+      $("#fadeToggle").click(function () {
+        $(".hello").fadeToggle(400);
+      });
+      $("#fadeTo").click(function () {
+        $(".hello").fadeTo("slow", 0.5);
+      });
+      $("#fadeToUp").click(function () {
+        $(".hello").fadeTo("slow", 1);
+      });
+      $("#slideDown").click(function () {
+        $(".hello").slideDown(100);
+      });
+      $("#slideUp").click(function () {
+        $(".hello").slideUp(100);
+      });
+      $("#slideToggle").click(function () {
+        $(".hello").slideToggle(100, function () {
+          alert("ini anjay juga");
+        });
+      });
+
+      $("#animasi").click(function () {
+        // animasi bisa digunakan asal positionnya relative,fixed, absolute
+        $("#anim").animate({ left: '250px' });
+        $("#anim").animate({ left: '0px' });
+      });
+      $("#besar").click(function () {
+        // animasi bisa digunakan asal positionnya relative,fixed, absolute
+        $("div").animate({
+          top: '+=200px',
+          width: '100px',
+          height: '100px',
+        });
+
+        $("#besarPlus").click(function () {
+          // animasi bisa digunakan asal positionnya relative,fixed, absolute
+          $("div").animate({
+            top: '50px',
+            width: '+=100px',
+            height: '+=100px',
+            backgroundColor: "red"
+          });
+        });
+        $("#tgl").click(function () {
+          $("div").animate({ height: 'toggle' }, "slow");
+          //bisa untuk navigation
+        });
+
+
+        // bisa dijalankan jika code "div" diatas dimatikan
+        $("#slide").click(function () {
+          $("#panel").slideDown(5000);
+          //bisa untuk navigation
+        });
+        $("#stop").click(function () {
+          $("#panel").stop();
+          //bisa untuk navigation
+        });
+      })
+    });
+
+
+
+
+
+  </script>
+</body>
+
+</html>

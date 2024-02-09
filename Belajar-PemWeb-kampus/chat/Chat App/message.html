@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Message</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style-type: none;
+        border-collapse: collapse;
+      }
+
+      .main {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .left {
+        width: 40%;
+        height: 100vh;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        background-color: white;
+      }
+
+      .hp {
+        width: 100%;
+        height: 100vh;
+        z-index: 999;
+        overflow: hidden;
+        background-image: url(back2.jpg);
+      }
+
+      header {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        padding: 5px 30px;
+        align-items: center;
+        box-sizing: border-box;
+        border-bottom: 1px solid black;
+        background-color: white;
+      }
+
+      header span {
+        position: relative;
+        left: -20px;
+      }
+
+      img {
+        position: relative;
+        left: -10px;
+        width: 35px;
+        border-radius: 100%;
+      }
+
+      .kontak {
+        margin: auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        top: 7px;
+        align-items: center;
+      }
+      .chat {
+        width: 100%;
+        height: 80%;
+        overflow-y: scroll;
+        background-color: transparent;
+        z-index: 1;
+        box-sizing: border-box;
+
+        display: flex;
+        align-items: flex-end;
+        flex-direction: row-reverse;
+        padding: 20px;
+      }
+
+      .keyboard {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      input {
+        width: 80%;
+        height: 40px;
+        padding-left: 20px;
+        overflow: scroll;
+        border-radius: 30px;
+        border: none;
+        box-shadow: 5px 6px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      button {
+        width: 45px;
+        height: 45px;
+        border-radius: 100%;
+        position: relative;
+        left: 20px;
+        bottom: 3px;
+      }
+
+      i {
+        cursor: pointer;
+        position: relative;
+      }
+
+      p {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(117, 245, 66, 0.5);
+        padding: 5px 15px;
+        border-radius: 50px;
+        margin: 20px 0;
+      }
+
+      .online {
+        position: relative;
+        top: 10px;
+        color: white;
+      }
+
+      .left h3 {
+        padding: 20px;
+      }
+
+      /* CHATTT */
+      .nama {
+        width: 100%;
+        height: 60px;
+        flex-direction: row;
+        display: flex;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+        margin: 5px 0;
+      }
+
+      .nama:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+
+      .nama-lagi {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+
+      .bub {
+        width: 45px;
+        height: 45px;
+        left: 0;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="left">
+        <h3>Chat</h3>
+        <div class="nama nama-lagi">
+          <img class="bub" src="hantu.gif" alt="logo" srcset="" />
+          <h4>Bub🦄</h4>
+        </div>
+        <div class="nama">
+          <img class="bub" src="hantu.gif" alt="logo" srcset="" />
+          <h4>Seraphine</h4>
+        </div>
+        <div class="nama">
+          <img class="bub" src="hantu.gif" alt="logo" srcset="" />
+          <h4>NanoKeboku</h4>
+        </div>
+      </div>
+
+      <div class="hp">
+        <header>
+          <img src="hantu.gif" alt="logo" srcset="" />
+          <div class="kontak">
+            <h3>Bub🦄</h3>
+            <p class="online" style="background-color: gray">Online</p>
+          </div>
+        </header>
+
+        <div class="chat">
+          <div class="bub1">
+            <div id="list">
+              <p>Coba kirim pesan!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="keyboard">
+          <input id="input" type="text" placeholder="Kirim pesan..." />
+          <button onclick="send()">
+            <i class="fa-solid fa-location-arrow fa-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function send() {
+        let input = document.getElementById("input");
+        if (input.value == ``) {
+          alert("masukkan pesan!!");
+          return false;
+        } else {
+          let node = document.createElement("p");
+          let chat = document.getElementById("list");
+          let textnode = document.createTextNode(`${input.value}`);
+          node.appendChild(textnode);
+
+          chat.appendChild(node);
+        }
+        input.value = " ";
+      }
+    </script>
+
+    <script
+      src="https://kit.fontawesome.com/60bfabd217.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

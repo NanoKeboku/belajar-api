@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="send()">nama</button><br />
+    nama :
+    <p id="demo"></p>
+
+    <script>
+      let mhs = [];
+
+      function send() {
+        let nama = prompt("Masukkan Nama :");
+        let demo = document.getElementById("demo");
+        if (nama) {
+          demo.innerHTML += `- ${nama} <br>`;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      text-decoration: none;
+      color: black;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      height: 100px;
+      position: relative;
+      padding: 20px;
+      box-sizing: border-box;
+      background-color: white;
+      border-bottom: 1px solid black;
+    }
+
+    .right-nav {
+      display: flex;
+      position: relative;
+      width: 100%;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .right-nav a {
+      padding: 10px;
+      border-radius: 10px;
+      color: black;
+      font-size: 15px;
+      position: relative;
+      color: rgb(96, 96, 96);
+      padding: 10px;
+      z-index: 999;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    }
+
+    .right-nav a:hover {
+      color: blueviolet;
+    }
+
+    #logo {
+      color: blueviolet;
+      font-size: 30px;
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    .main {
+      width: 50%;
+      height: 100vh;
+      padding: 20px;
+      margin: auto;
+    }
+
+    .container {
+      width: 800px;
+      height: 200px;
+      border: 1px solid black;
+      display: flex;
+      overflow: hidden;
+      border-radius: 20px;
+      margin: 40px 0;
+    }
+
+    img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+  <body>
+    <nav>
+      <a href="home.html" id="logo">Alhambra News</a>
+      <div class="right-nav">
+        <a href="/tugas-berita/home.html">HOME</a>
+        <a href="">PROFILE</a>
+        <a href="/tugas-berita/contact.html">CONTACT US</a>
+      </div>
+    </nav>
+    <div class="main">
+      <h1>News</h1>
+      <div class="container">
+        <div class="foto">
+          <img
+            src="foto/Solo Leveling (Wallpaper engine).jpeg"
+            alt="solo leveling"
+          />
+        </div>
+        <div class="content">
+          <h2><a href="index.html">Solo Leveling Update</a></h2>
+          <br />
+          <p>
+            <a href="index.html">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+              mollitia a officiis omnis minima. Earum soluta non dolore nesciunt
+              deleniti?</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

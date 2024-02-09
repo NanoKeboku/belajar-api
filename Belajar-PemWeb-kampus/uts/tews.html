@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        position: relative;
+      }
+
+      /* .container.merah {
+        background-color: red;
+        left: 150px;
+      }
+
+      .container.biru {
+        background-color: blue;
+      } */
+    </style>
+  </head>
+  <body>
+    <script>
+      let saldo = 1999;
+      let cek = prompt(
+        "1. Cek saldo \n2. isi pulsa 5000 \n3. isi pulsa 10.000 \n4.isi pulsa 25000"
+      );
+
+      switch (cek) {
+        case "1":
+          prompt("Saldo anda : " + saldo);
+          break;
+        case "2":
+          prompt(
+            "Selamat anda berhasil isi pulsa \n Saldo anda : " + (saldo + 5000)
+          );
+          break;
+        case "3":
+          prompt(
+            "Selamat anda berhasil isi pulsa \n Saldo anda : " + (saldo + 10000)
+          );
+          break;
+        case "4":
+          prompt(
+            "Selamat anda berhasil isi pulsa \n Saldo anda : " + (saldo + 25000)
+          );
+        default:
+          alert("Pilihan salah");
+          break;
+      }
+
+      //   if (cek == 1) {
+      //     prompt("Saldo anda : " + saldo);
+      //   } else if (cek == 2) {
+      //     prompt(
+      //       "Selamat anda berhasil isi pulsa \n Saldo anda : " + (saldo + 5000)
+      //     );
+      //   } else if (cek == 3) {
+      //     prompt(
+      //       "Selamat anda berhasil isi pulsa \n Saldo anda : " + (saldo + 10000)
+      //     );
+      //   } else if (cek == 4) {
+      //     prompt(
+      //       "Selamat anda berhasil isi pulsa \n Saldo anda : " + (saldo + 25000)
+      //     );
+      //   }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 60%;
+        height: 200px;
+        border: 1px solid black;
+        border-radius: 40px;
+        padding: 30px;
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+      }
+
+      select {
+        border: 1px solid greenyellow;
+        padding: 10px;
+        border-radius: 5px;
+        display: flex;
+      }
+
+      select option {
+        margin: 40px;
+        background: rgba(0, 0, 0, 0.3);
+        color: #fff;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+      }
+
+      .pengiriman,
+      .kurir {
+        width: 50%;
+        height: 100%;
+      }
+
+      button {
+        height: 50px;
+        width: 100px;
+        position: absolute;
+        top: 200px;
+      }
+
+      .result {
+        width: 20%;
+        height: 50px;
+        border: 1px solid black;
+        border-radius: 20px;
+        margin: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="pengiriman">
+        <p>Pilih Pengiriman</p>
+        <select id="pengirim" name="pengirim">
+          <option value="1">Next Day (Rp.35.000)</option>
+          <option value="2">Reguler (Rp.15.000 - Rp.19.000)</option>
+          <option value="3">Kargo (Rp.40.000)</option>
+        </select>
+      </div>
+      <div class="kurir">
+        <p>Pilih Karir</p>
+        <select id="kurir" name="kurir">
+          <option value="1">J&T (Rp.15.000)</option>
+        </select>
+        <p style="color: gray">Estimasi tiba 22 - 25 Nov</p>
+      </div>
+      <button onclick="send()">Submit</button>
+    </div>
+    <div class="result">
+      <p>Harga :</p>
+      <p id="demo"></p>
+    </div>
+
+    <script>
+      let dua = 15000;
+      let tiga = 40000;
+      let satu = 35000;
+      let result;
+      height;
+      function send() {
+        let pengirim = document.getElementById("pengirim");
+        if (pengirim.value == 1) {
+          result = satu + 206000 + 15000;
+          document.getElementById("demo").innerHTML = result;
+        } else if (pengirim.value == 2) {
+          result = dua + 206000 + 15000;
+          document.getElementById("demo").innerHTML = result;
+        } else if (pengirim.value == 3) {
+          result = tiga + 206000 + 15000;
+          document.getElementById("demo").innerHTML = result;
+        }
+      }
+    </script>
+  </body>
+</html>

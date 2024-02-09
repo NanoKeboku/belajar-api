@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verification</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      body {
+        background-image: url(pink.img);
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 93%;
+        height: 100vh;
+      }
+      fieldset {
+        text-align: center;
+        width: 120%;
+        height: 35vh;
+        margin: auto;
+        background-color: lavenderblush;
+        border-radius: 20px;
+        padding: 15px;
+      }
+      button {
+        background-color: mistyrose;
+        padding: 5px;
+        width: 50px;
+        height: 40px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <h1>Masukkan Kode Verifikasi</h1>
+        <p>Kode verifikasi akan dikirim, tunggu sebentar</p>
+        <br /><br /><br /><br />
+        <input id="input" type="text" /><br /><br />
+      </fieldset>
+    </form>
+    <button onclick="send()" class="button1">Kirim</button>
+    <script>
+      let code = 12345678;
+      function send() {
+        let input = document.getElementById("input");
+        if (input.value != code) {
+          input.style.color = "red";
+        } else {
+          window.location.href = "message.html";
+        }
+      }
+    </script>
+  </body>
+</html>

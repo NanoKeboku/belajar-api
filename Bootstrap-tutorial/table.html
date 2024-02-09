@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <style>
+    .alert {
+      display: none;
+    }
+
+    .alert.on {
+      display: flex;
+    }
+  </style>
+  <button class="btn btn-primary" id="start">START</button>
+  <div class="alert alert-success alert-dismissible">
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    <strong>Success!</strong> This alert box could indicate a successful or
+    positive action.
+  </div>
+  <body>
+    <!-- diberikan responsive di div agar table dapat mudah di responsivekan -->
+    <div class="container mt-3 table-responsive-md">
+      <table
+        class="table table-borderless table-sm table-striped table-dark table-hover"
+      >
+        <thead>
+          <tr>
+            <th>Hello</th>
+            <th>Who</th>
+            <th>How</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Nando</td>
+            <td>
+              Lamaawmdwakdmwakdmkwamdlakndlkwandlkwandlkwandlwandlkwandlwadnl
+            </td>
+            <td>YNTKTS</td>
+          </tr>
+          <tr>
+            <td>Nando</td>
+            <td>Lama</td>
+            <td>YNTKTS</td>
+          </tr>
+          <tr>
+            <td>Mana</td>
+            <td>ada</td>
+            <td>kamu</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p id="demo">1</p>
+
+    <button class="btn btn-primary">
+      <span class="spinner-border spinner-border-sm"></span>
+    </button>
+    <button class="btn btn-primary">
+      <span class="spinner-border spinner-border-sm"></span>
+      Loading..
+    </button>
+
+    <button class="btn btn-primary" disabled>
+      <span class="spinner-border spinner-border-sm"></span>
+      Loading..
+    </button>
+
+    <button class="btn btn-primary" disabled>
+      <span class="spinner-grow spinner-grow-sm"></span>
+      Loading..
+    </button>
+    <script>
+      let btn = document.getElementById("start");
+      btn.addEventListener("click", function () {
+        for (let i = 0; i <= 100; i++) {
+          // let p = document.createElement("p");
+          // p.textContent = i;
+          // document.getElementById("demo").appendChild(p);
+          let p = 10;
+          p;
+          document.getElementById("demo").innerHTML = parseInt(p + i);
+        }
+      });
+      // document.querySelector(".alert").classList.toggle("on");
+      // let cont = document.querySelector(".container");
+      // let p = document.createElement("P");
+      // p.textContent = "hello mothefucker!!";
+      // cont.appendChild(p);
+    </script>
+  </body>
+</html>

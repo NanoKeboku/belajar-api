@@ -1,0 +1,197 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: black;
+}
+
+p {
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  background-image: url(/tugas-berita/foto/Solo\ Leveling\ _\ GIF.gif);
+  background-repeat: no-repeat;
+  background-position: 0 -200px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100px;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: white;
+  overflow: hidden;
+}
+
+#logo {
+  color: blueviolet;
+  font-size: 30px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.solo-lev {
+  width: 200px;
+  position: absolute;
+  right: 0;
+}
+
+.right-nav {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  gap: 20px;
+}
+
+.right-nav a {
+  padding: 10px;
+  border-radius: 10px;
+  color: black;
+  font-size: 15px;
+  position: relative;
+  color: rgb(96, 96, 96);
+  padding: 10px;
+  z-index: 999;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.right-nav a:hover {
+  color: blueviolet;
+}
+
+.judul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0 50px 30px;
+  width: 100%;
+  top: 100px;
+  left: 50px;
+  background-color: transparent;
+}
+
+h5,
+h6 {
+  padding: 10px 0;
+  color: black;
+}
+
+.judul h1 {
+  font-size: 4vw;
+  font-family: monospace;
+}
+
+h1 span {
+  color: blueviolet;
+}
+
+.parent {
+  width: 100%;
+  height: 370px;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 0 0 150px 0px;
+  position: relative;
+  padding-top: 0px;
+  background-color: rgba(225, 225, 225, 0.4);
+  backdrop-filter: blur(1px) saturate(136%);
+  -webkit-backdrop-filter: blur(1px) saturate(136%);
+  background-color: rgba(255, 255, 255, 0.53);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  overflow: hidden;
+}
+
+.hero {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.par {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 100%;
+  margin: auto;
+}
+
+.hero img {
+  width: 20%;
+  height: 600px;
+  object-fit: cover;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.hero img:hover {
+  width: 70%;
+}
+
+main {
+  height: 130vh;
+  overflow: hidden;
+}
+
+main h6 {
+  position: relative;
+  padding: 0;
+  color: white;
+}
+
+.cibi {
+  width: 500px;
+  position: absolute;
+  left: 440px;
+  top: -100px;
+}
+
+.bio {
+  position: relative;
+  top: 150px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  text-align: justify;
+  margin: auto;
+  padding: 20px;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 40px;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  background-color: #131212;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  margin-top: 30px;
+}
+
+.logo-footer {
+  display: flex;
+  border-right: 1px solid white;
+  width: 180px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-footer h2 {
+  color: white;
+  font-size: 1vw;
+}

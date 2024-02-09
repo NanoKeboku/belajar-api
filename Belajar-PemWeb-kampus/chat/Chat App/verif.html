@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verifikasi</title>
+    <style>
+      * {
+        text-align: center;
+      }
+
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .form {
+        width: 40%;
+        height: 60vh;
+        border: 1px solid greenyellow;
+        border-radius: 20px;
+        margin: auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        box-sizing: border-box;
+        align-items: center;
+        justify-content: center;
+      }
+
+      input {
+        margin: 20px 0;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid black;
+      }
+
+      input:focus {
+        outline: none;
+        border-bottom: 1px solid green;
+      }
+
+      button {
+        padding: 15px 30px;
+        border-radius: 30px;
+        background-color: greenyellow;
+        border: none;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form">
+      <h3>Masukkan Code Verifikasi</h3>
+      <p>Kode verifikasi akan dikirimkan melalui alert 5 detik lagi</p>
+      <input type="text" id="input" />
+      <button onclick="send()">Send</button>
+    </div>
+
+    <script>
+      setTimeout(verif, 3000);
+      let pw = 321221;
+
+      function send() {
+        let input = document.getElementById("input");
+        if (input.value != pw) {
+          input.style.color = "red";
+          return false;
+        } else {
+          window.location.href = "message.html";
+        }
+      }
+
+      function verif() {
+        alert(`kode verifikasi : ${pw}`);
+      }
+    </script>
+  </body>
+</html>

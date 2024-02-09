@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.4.1.js"></script>
+</head>
+<style>
+    div {
+        position: absolute;
+    }
+</style>
+
+<body>
+    <button id="kiri">Kanan</button>
+    <button id="atas">Bawah</button>
+    <button id="bawah">Atas</button>
+    <button id="kanan">Kiri</button>
+    <div>
+        <span>🚗</span>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#kiri").click(function () {
+                $("div").animate({ left: "+=10px" });
+            })
+            $("#atas").click(function () {
+                $("div").animate({ top: "+=10px" });
+            })
+            $("#bawah").click(function () {
+                $("div").animate({ bottom: "+=10px" });
+            })
+            $("#kanan").click(function () {
+                $("div").animate({ right: "+=10px" });
+            })
+        })
+    </script>
+</body>
+
+</html>
